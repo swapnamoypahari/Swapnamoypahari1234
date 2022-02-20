@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto 30px;
+}
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 15px 0;
+    font-family: 'Ubuntu',sans-serif;
+    transition: all 0.3s ease;
+}
+.navbar.sticky{
+    padding:15px 0;
+    background: rgb(220, 100, 20);
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    color: black;
+    font-size: 35px;
+    font-weight: 600;
+}
+.navbar .logo a span{
+    color: rgb(73, 20, 220);
+    transition: color 0.3s ease;
+}
+.navbar.sticky .logo a span{
+    color: #fff;
+}
+.navbar.sticky .logo a{
+    color: #fff;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color: rgb(220, 20, 120);
+}
+.navbar.sticky .menu li a:hover{
+    color:#fff;
+}
+.home{
+    display: flex;
+    background: url("background.webp") no-repeat center;
+    background-size: cover;
+    height:87vh;
+    color: black;
+    min-height: 500px;
+    font-family: 'Ubuntu',sans-serif;
+}
+.home-content{
+    display: flex;
+    padding: 50px;
+}
+.selfie{
+    height: 470px;
+    width: 375px;
+    margin-bottom: 650px;
+}
+.name{
+    margin-right: 250px;
+    margin-left: 60px;
+    margin-top: 200px;
+    font-size: 2rem;
+    width: 500px;
+}
+.heading{
+    margin-bottom: 5px;
+    color:royalblue;
+}
+.line{
+    margin-left: 50px;
+}
+section{
+    padding: 23px 0;
+}
+.about{
+    font-family: 'Poppins',sans-serif;
+	background: rgba(128, 240, 137, 0.904);
+}
+.about .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    font-family: 'Ubuntu',sans-serif;
+}
+.about .title::before{
+    content: "";
+    position: absolute;
+    bottom:0px;
+    left: 50%;
+    width:130px;
+    height:3px;
+    background:black;
+    transform: translateX(-50%);
+}
+.about .about-content{
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.about .about-content.center{
+    width:55%;
+}
+.about .about-content.center .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.Education{
+    font-family: 'Poppins',sans-serif;
+	background: lightseagreen;
+}
+.Education .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    font-family: 'Ubuntu',sans-serif;
+}
+.Education .title::before{
+    content: "";
+    position: absolute;
+    bottom:0px;
+    left: 50%;
+    width:200px;
+    height:3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+.educationtable{
+    margin: auto;
+    width: 1000px;
+    border: 1px solid black;
+    text-align: center;
+}
+.tableheading{
+    border: 1px solid black;
+}
+.download{
+    background-color:blue;
+    padding: 10px;
+    margin-left: 100px;
+    margin-top: 20px;
+    display: inline-block;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+.download:hover{
+    color: rgb(20, 40, 220);
+    background: none;
+}
+.skillcontainer{
+    width: 50%;
+    margin: 0 auto;
+  }
+  @keyframes load{
+    from {
+      width: 0%
+    }
+  }
+  @-webkit-keyframes load{
+    from {
+      width: 0%
+    }
+  }
+  @-moz-keyframes load{
+    from {
+      width: 0%
+    }
+  }
+  @-o-keyframes load{
+    from {
+      width: 0%
+    }
+  }
+  
+  .bar{
+    background-color: #EEE;
+    padding: 2px;
+    border-radius: 15px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #FFF;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+  }
+  .bar::before{
+    content:  attr(data-skill);
+    background-color:green;
+    display: inline-block;
+    padding: 5px 0 5px 10px;
+    border-radius: inherit;
+    animation: load 2s 0s;
+    -webkit-animation: load 2s 0s;
+    -moz-animation: load 2s 0s;
+    -o-animation: load 2s 0s;
+  }
+  
+  .bar.front::before{
+    background-color: red;
+  }
+  .bar.back::before{
+    background-color: blue;
+  }
+  
+  .bar.learning::before{
+    width: calc(85% - 10px);
+  }
+  .bar.basic::before{
+    width: calc(65% - 10px);
+  }
+  .bar.intermediate::before{
+    width: calc(90% - 10px);
+  }
+  .bar.advanced::before{
+    width: calc(80% - 10px);
+  }
+  .bar.expert::before{
+    width: calc(60% - 10px);
+  }
+.skillheading{
+    text-decoration: underline;
+    margin-left: 300px;
+    margin-bottom: 30px;
+}
+.trainings{
+    font-family: 'Poppins',sans-serif;
+	background: darkorange;
+}
+.trainings .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    font-family: 'Ubuntu',sans-serif;
+}
+.trainings .title::before{
+    content: "";
+    position: absolute;
+    bottom:0px;
+    left: 50%;
+    width:180px;
+    height:3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+.language{
+    font-family: 'Poppins',sans-serif;
+}
+.language .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    font-family: 'Ubuntu',sans-serif;
+}
+.language .title::before{
+    content: "";
+    position: absolute;
+    bottom:0px;
+    left: 50%;
+    width:200px;
+    height:3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+.language{
+    text-align: center;
+    background-color: orchid;
+}
+.project{
+    font-family: 'Poppins',sans-serif;
+	background: yellowgreen;
+}
+.project .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    font-family: 'Ubuntu',sans-serif;
+}
+.project .title::before{
+    content: "";
+    position: absolute;
+    bottom:0px;
+    left: 50%;
+    width:170px;
+    height:3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+.icon{
+    color:crimson;
+    font-size: 1.3rem;
+    padding: 10px;
+}
+.footer{
+    padding: 30px;
+    text-align: center;
+    background: black;
+    color: white;
+}
+.sociallinks{
+    margin-bottom: 10px;
+}
